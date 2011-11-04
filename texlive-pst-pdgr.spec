@@ -59,6 +59,7 @@ TeX files from spreadsheets is available.
 %doc %{_texmfdistdir}/source/generic/pst-pdgr/Makefile
 %doc %{_texmfdistdir}/source/generic/pst-pdgr/pst-pdgr.dtx
 %doc %{_texmfdistdir}/source/generic/pst-pdgr/pst-pdgr.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -69,3 +70,5 @@ TeX files from spreadsheets is available.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
