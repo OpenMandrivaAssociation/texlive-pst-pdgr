@@ -18,9 +18,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
-Conflicts:	texlive-source <= 20110705-3
 
 %description
 The package provides a set of macros based on PSTricks to draw
@@ -31,20 +28,12 @@ making trees is also provided. The package may be used both
 with LaTeX and PlainTeX. A separate Perl program for generating
 TeX files from spreadsheets is available.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -60,7 +49,6 @@ TeX files from spreadsheets is available.
 %doc %{_texmfdistdir}/source/generic/pst-pdgr/Makefile
 %doc %{_texmfdistdir}/source/generic/pst-pdgr/pst-pdgr.dtx
 %doc %{_texmfdistdir}/source/generic/pst-pdgr/pst-pdgr.ins
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -71,5 +59,3 @@ TeX files from spreadsheets is available.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
