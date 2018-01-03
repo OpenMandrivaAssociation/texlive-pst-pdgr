@@ -1,9 +1,3 @@
-# revision 15878
-# category Package
-# catalog-ctan /graphics/pstricks/contrib/pedigree/pst-pdgr
-# catalog-date 2007-08-14 12:06:32 +0200
-# catalog-license lppl
-# catalog-version 0.3
 Name:		texlive-pst-pdgr
 Version:	0.4
 Release:	1
@@ -38,17 +32,11 @@ TeX files from spreadsheets is available.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/generic/pst-pdgr/pst-pdgr.tex
-%{_texmfdistdir}/tex/latex/pst-pdgr/pst-pdgr.cfg
-%{_texmfdistdir}/tex/latex/pst-pdgr/pst-pdgr.sty
-%doc %{_texmfdistdir}/doc/generic/pst-pdgr/NEWS
-%doc %{_texmfdistdir}/doc/generic/pst-pdgr/README
-%doc %{_texmfdistdir}/doc/generic/pst-pdgr/pst-pdgr.bib
-%doc %{_texmfdistdir}/doc/generic/pst-pdgr/pst-pdgr.pdf
+%{_texmfdistdir}/tex/generic/pst-pdgr
+%{_texmfdistdir}/tex/latex/pst-pdgr
+%doc %{_texmfdistdir}/doc/generic/pst-pdgr
 #- source
-%doc %{_texmfdistdir}/source/generic/pst-pdgr/Makefile
-%doc %{_texmfdistdir}/source/generic/pst-pdgr/pst-pdgr.dtx
-%doc %{_texmfdistdir}/source/generic/pst-pdgr/pst-pdgr.ins
+%doc %{_texmfdistdir}/source/generic/pst-pdgr
 
 #-----------------------------------------------------------------------
 %prep
@@ -59,17 +47,3 @@ TeX files from spreadsheets is available.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.3-2
-+ Revision: 755397
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.3-1
-+ Revision: 719379
-- texlive-pst-pdgr
-- texlive-pst-pdgr
-- texlive-pst-pdgr
-- texlive-pst-pdgr
-
