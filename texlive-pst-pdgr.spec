@@ -1,6 +1,6 @@
 Name:		texlive-pst-pdgr
 Version:	0.4
-Release:	1
+Release:	2
 Summary:	Draw medical pedigrees using pstricks
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pedigree/pst-pdgr
