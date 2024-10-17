@@ -3,7 +3,7 @@ Version:	45875
 Release:	2
 Summary:	Draw medical pedigrees using pstricks
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pedigree/pst-pdgr
+URL:		https://www.ctan.org/tex-archive/graphics/pstricks/contrib/pedigree/pst-pdgr
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-pdgr.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-pdgr.doc.r%{version}.tar.xz
